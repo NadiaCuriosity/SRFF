@@ -10,7 +10,7 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 20px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #2f5f5f 0%, #1a4040 100%);
             min-height: 100vh;
             color: #333;
         }
@@ -25,7 +25,7 @@
         }
         
         .header {
-            background: linear-gradient(135deg, #2c5aa0 0%, #1e3a8a 100%);
+            background: linear-gradient(135deg, #2f5f5f 0%, #1a4040 100%);
             color: white;
             padding: 30px;
             text-align: center;
@@ -56,7 +56,7 @@
         }
         
         .workflow-header {
-            background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+            background: linear-gradient(135deg, #2f5f5f 0%, #1a4040 100%);
             color: white;
             padding: 20px 30px;
             margin: 0;
@@ -128,7 +128,7 @@
         .stat-number {
             font-size: 2em;
             font-weight: 700;
-            color: #3b82f6;
+            color: #2f5f5f;
             margin-bottom: 8px;
         }
         
@@ -138,8 +138,8 @@
         }
         
         .automation-note {
-            background: #f0f9ff;
-            border: 2px solid #0ea5e9;
+            background: #f5f7f0;
+            border: 2px solid #b8860b;
             border-radius: 12px;
             padding: 20px;
             margin: 30px;
@@ -147,27 +147,27 @@
         }
         
         .automation-note h3 {
-            color: #0284c7;
+            color: #8b6914;
             margin: 0 0 10px 0;
         }
         
         .automation-note p {
             margin: 0;
-            color: #0c4a6e;
+            color: #6b5b0a;
         }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="header">
-            <h1>SRFF</h1>
+            <h1>Southern Rivers Fly Fishing</h1>
             <p>Current Workflow Analysis &amp; Process Maps</p>
         </div>
         
         <div class="content">
             <div class="stats">
                 <div class="stat-card">
-                    <div class="stat-number">8</div>
+                    <div class="stat-number">6</div>
                     <div class="stat-label">Core Workflows</div>
                 </div>
                 <div class="stat-card">
@@ -335,7 +335,68 @@
                 </div>
             </div>
             
-            <!-- Workflow 4: Peak Season Communication Crisis -->
+            <!-- Workflow 4: Trip Planning & Coordination -->
+            <div class="workflow-section">
+                <div class="workflow-header">
+                    <h2>Workflow 4: Trip Planning &amp; Coordination</h2>
+                    <p>Time Investment: 2-3 hours per comprehensive trip • Multiple communication channels with no central tracking</p>
+                </div>
+                
+                <div class="pain-points">
+                    <h4>⚠️ Major Pain Points</h4>
+                    <ul>
+                        <li><strong>Multiple communication channels</strong> (online, text, phone, email) with no central tracking</li>
+                        <li>Manual entry of all booking details into calendar is time-intensive</li>
+                        <li>No standardised templates for common itinerary types</li>
+                        <li>Coordination complexity increases with trip comprehensiveness</li>
+                        <li>No backup if Jake unavailable during planning phase</li>
+                    </ul>
+                </div>
+                
+                <div class="diagram-container">
+                    <div class="mermaid">
+                    flowchart TD
+                        A["Jake Reviews Client Questionnaire Responses"] --> B["Trip Planning Begins"]
+                        B --> C["Accommodation Booking"]
+                        C --> D{"Booking Method"}
+                        D -->|"Most Common"| E["Jake Books Online"]
+                        D -->|"Some Providers"| F["Jake Texts Accommodation"]
+                        D -->|"Complex Bookings"| G["Jake Calls Accommodation"]
+                        
+                        B --> H["Helicopter Coordination"]
+                        H --> I["Jake Emails Helicopter Operators"]
+                        I --> J["Jake Calls for Confirmation"]
+                        
+                        B --> K["Transport & Restaurant Bookings"]
+                        K --> L{"Contact Method"}
+                        L -->|"Transfers"| M["Jake Phones or Texts Transport"]
+                        L -->|"Restaurants"| N["Jake Phones or Texts Restaurants"]
+                        
+                        E --> O["Jake Manually Adds ALL Details to Calendar"]
+                        F --> O
+                        G --> O
+                        J --> O
+                        M --> O
+                        N --> O
+                        
+                        O --> P["Jake Creates Personalised Itinerary"]
+                        P --> Q["Jake Coordinates All Elements"]
+                        Q --> R["Jake Sends Final Itinerary to Client"]
+                        
+                        classDef manual fill:#fed7c3,stroke:#ea580c,stroke-width:2px
+                        classDef painpoint fill:#fecaca,stroke:#dc2626,stroke-width:2px
+                        classDef process fill:#dbeafe,stroke:#374151,stroke-width:2px
+                        classDef decision fill:#fef3c7,stroke:#374151,stroke-width:2px
+                        
+                        class A,B,R process
+                        class C,E,F,G,H,I,J,K,M,N,P,Q manual
+                        class O painpoint
+                        class D,L decision
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Workflow 5: Peak Season Communication Pinch Point -->
             <div class="workflow-section">
                 <div class="workflow-header">
                     <h2>Workflow 6: Peak Season Communication Pinch Point</h2>
@@ -355,7 +416,7 @@
                 <div class="diagram-container">
                     <div class="mermaid">
                     flowchart TD
-                        A["Peak Season Begins"] --> B["Jake Commits to 24-Hour Response Time"]
+                        A["Peak Season Begins"] --> B["Jake Aims for 24-Hour Response Time"]
                         B --> C["Jake Guides Clients - Primary Revenue Activity"]
                         C --> D["Emails Stack Up - Out of Cell Coverage"]
                         D --> E["Jake Tries to Respond While Guiding"]
@@ -376,20 +437,20 @@
                         classDef painpoint fill:#fecaca,stroke:#dc2626,stroke-width:2px
                         classDef process fill:#dbeafe,stroke:#374151,stroke-width:2px
                         classDef decision fill:#fef3c7,stroke:#374151,stroke-width:2px
-                        classDef crisis fill:#dc2626,stroke:#ffffff,stroke-width:3px
+                        classDef pinchpoint fill:#dc2626,stroke:#ffffff,stroke-width:3px
                         
                         class A,B,C process
                         class D,E,G,H,I,J,K,L,M,N,O painpoint
-                        class L,M crisis
+                        class L,M pinchpoint
                         class F decision
                     </div>
                 </div>
             </div>
             
-            <!-- Workflow 5: Post-Trip Management -->
+            <!-- Workflow 6: Post-Trip Management -->
             <div class="workflow-section">
                 <div class="workflow-header">
-                    <h2>Workflow 8: Post-Trip Management</h2>
+                    <h2>Workflow 6: Post-Trip Management</h2>
                     <p>Achieves 70% review response rate through personal touch • Newsletter generates 6 bookings annually</p>
                 </div>
                 
